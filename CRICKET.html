@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CricHeroes NRR Calculator</title>
+  <link rel="stylesheet" href="cricket.css" >
+</head>
+<body>
+  <div class="container">
+    <h1>🏏 CricHeroes NRR Calculator</h1>
+    <form id="nrrForm">
+      <label>Your Team:</label>
+      <select id="yourTeam">
+        <option value="Rajasthan Royals">Rajasthan Royals</option>
+        <option value="Chennai Super Kings">Chennai Super Kings</option>
+        <option value="Delhi Capitals">Delhi Capitals</option>
+        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+        <option value="Mumbai Indians">Mumbai Indians</option>
+      </select>
+
+      <label>Opposition Team:</label>
+      <select id="oppTeam">
+        <option value="Delhi Capitals">Delhi Capitals</option>
+        <option value="Rajasthan Royals">Rajasthan Royals</option>
+        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+        <option value="Chennai Super Kings">Chennai Super Kings</option>
+        <option value="Mumbai Indians">Mumbai Indians</option>
+      </select>
+
+      <label>Match Overs:</label>
+      <input type="number" id="overs" value="20" min="1" />
+
+      <label>Desired Position:</label>
+      <input type="number" id="desiredPosition" value="3" min="1" />
+
+      <label>Toss Result:</label>
+      <select id="toss">
+        <option value="bat">Batting First</option>
+        <option value="bowl">Bowling First</option>
+      </select>
+
+      <label id="runsLabel">Runs Scored (if batting first):</label>
+      <input type="number" id="runsInput" placeholder="Enter runs" />
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div class="output">
+      <h2>📊 Match Analysis Output</h2>
+      <pre id="result"></pre>
+    </div>
+  </div>
+
+  <script src="cricket.js"></script>
+</body>
+</html>
